@@ -23,7 +23,7 @@ plot_dec_boundaries(feat_train, label_train, class_means)
 [rate, errors] = run_classifier(class_means, feat_train, label_train);
 
 % print training set error rate
-fprintf('Test Set Statistics\n')
+fprintf('Training Set Misclassification Statistics\n')
 fprintf('Error Rate: %f\n', rate)
 for i = 1:length(errors)
    fprintf('Class %u Errors: %u\n', i, errors(i))
@@ -34,7 +34,7 @@ plot_dec_boundaries(feat_test, label_test, class_means)
 [rate, errors] = run_classifier(class_means, feat_test, label_test);
 
 % print test set error rate
-fprintf('\n\nTraining Set Statistics\n')
+fprintf('\n\nTest Set Misclassification Statistics\n')
 fprintf('Error Rate: %f\n', rate)
 for i = 1:length(errors)
    fprintf('Class %u Errors: %u\n', i, errors(i))
